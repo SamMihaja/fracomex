@@ -1,4 +1,4 @@
-defmodule Fracomex.Repo.Migrations.CreateSubFamilies do
+defmodule FracomexSynchro.Repo.Migrations.CreateSubFamilies do
   use Ecto.Migration
 
   def change do

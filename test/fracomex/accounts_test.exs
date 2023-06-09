@@ -1,12 +1,12 @@
-defmodule Fracomex.AccountsTest do
-  use Fracomex.DataCase
+defmodule FracomexSynchro.AccountsTest do
+  use FracomexSynchro.DataCase
 
-  alias Fracomex.Accounts
+  alias FracomexSynchro.Accounts
 
   describe "users" do
-    alias Fracomex.Accounts.User
+    alias FracomexSynchro.Accounts.User
 
-    import Fracomex.AccountsFixtures
+    import FracomexSynchro.AccountsFixtures
 
     @invalid_attrs %{city: nil, country: nil, firstname: nil, mail_address: nil, name: nil, password: nil, phone_number: nil, street: nil, zipcode: nil}
 
@@ -74,9 +74,9 @@ defmodule Fracomex.AccountsTest do
   end
 
   describe "countries" do
-    alias Fracomex.Accounts.Country
+    alias FracomexSynchro.Accounts.Country
 
-    import Fracomex.AccountsFixtures
+    import FracomexSynchro.AccountsFixtures
 
     @invalid_attrs %{name: nil}
 
@@ -128,9 +128,9 @@ defmodule Fracomex.AccountsTest do
   end
 
   describe "cities" do
-    alias Fracomex.Accounts.City
+    alias FracomexSynchro.Accounts.City
 
-    import Fracomex.AccountsFixtures
+    import FracomexSynchro.AccountsFixtures
 
     @invalid_attrs %{name: nil, zipcode: nil}
 

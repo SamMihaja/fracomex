@@ -1,5 +1,5 @@
-defmodule FracomexWeb.PageControllerTest do
-  use FracomexWeb.ConnCase
+defmodule FracomexSynchroWeb.PageControllerTest do
+  use FracomexSynchroWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

@@ -1,3 +1,3 @@
-defmodule FracomexWeb.PageViewTest do
-  use FracomexWeb.ConnCase, async: true
+defmodule FracomexSynchroWeb.PageViewTest do
+  use FracomexSynchroWeb.ConnCase, async: true
 end

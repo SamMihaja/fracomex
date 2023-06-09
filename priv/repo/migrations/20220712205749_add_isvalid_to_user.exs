@@ -1,4 +1,4 @@
-defmodule Fracomex.Repo.Migrations.AddIsvalidToUser do
+defmodule FracomexSynchro.Repo.Migrations.AddIsvalidToUser do
   use Ecto.Migration
 
   def change do

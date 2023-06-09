@@ -1,4 +1,4 @@
-defmodule Fracomex.Repo.Migrations.AlterUserSchema do
+defmodule FracomexSynchro.Repo.Migrations.AlterUserSchema do
   use Ecto.Migration
 
   def change do

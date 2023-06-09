@@ -1,4 +1,4 @@
-# Fracomex
+# FracomexSynchro
 
 To start your Phoenix server:
 

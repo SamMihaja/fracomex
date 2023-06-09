@@ -7,14 +7,14 @@
 # General application configuration
 import Config
 
-config :fracomex,
-  ecto_repos: [Fracomex.Repo]
+config :fracomex_synchro,
+  ecto_repos: [FracomexSynchro.Repo]
 
 # Configures the endpoint
-config :fracomex, FracomexWeb.Endpoint,
-  url: [host: "162.19.74.21"],
-  render_errors: [view: FracomexWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Fracomex.PubSub,
+config :fracomex_synchro, FracomexSynchroWeb.Endpoint,
+  url: [host: "localhost"],
+  render_errors: [view: FracomexSynchroWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: FracomexSynchro.PubSub,
   live_view: [signing_salt: "vQgynYPm"]
 
 # Configures the mailer
@@ -24,12 +24,12 @@ config :fracomex, FracomexWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-# config :fracomex, Fracomex.Mailer, adapter: Swoosh.Adapters.Local
+# config :FracomexSynchro, FracomexSynchro.Mailer, adapter: Swoosh.Adapters.Local
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false
 
-config :fracomex, Fracomex.Mailer,
+config :fracomex_synchro, FracomexSynchro.Mailer,
   adapter: Swoosh.Adapters.SMTP,
   relay: "ssl0.ovh.net",
   username: "fracomex@mgbi.mg",

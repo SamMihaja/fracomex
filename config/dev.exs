@@ -1,24 +1,24 @@
 import Config
 
 # Configure your database
-config :fracomex, Fracomex.Repo,
+config :fracomex_synchro, FracomexSynchro.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "MGbi@262**",
   hostname: "localhost",
   database: "fracomex",
+  port: 5433,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
-config :fracomex, Fracomex.EbpRepo,
+config :fracomex_synchro, FracomexSynchro.EbpRepo,
   username: "sa",
   password: "@ebp78EBP",
-  hostname: "37.59.57.29",
   database: "FRACOMEX_0895452f-b7c1-4c00-a316-c6a6d0ea4bf4",
-  instance: "EBP_2017",
-  stacktrace: true,
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
+  hostname: "193.253.120.50",
+  timeout: 45_000,
+  odbc_driver: "{SQL Server Native Client 11.0}",
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
@@ -26,7 +26,7 @@ config :fracomex, Fracomex.EbpRepo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with esbuild to bundle .js and .css sources.
-config :fracomex, FracomexWeb.Endpoint,
+config :fracomex_synchro, FracomexSynchroWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {0, 0, 0, 0}, port: 4005],
@@ -64,13 +64,13 @@ config :fracomex, FracomexWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :fracomex, FracomexWeb.Endpoint,
+config :fracomex_synchro, FracomexSynchroWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/fracomex_web/(live|views)/.*(ex)$",
-      ~r"lib/fracomex_web/templates/.*(eex)$"
+      ~r"lib/fracomex_synchro_web/(live|views)/.*(ex)$",
+      ~r"lib/fracomex_synchro_web/templates/.*(eex)$"
     ]
   ]
 

@@ -1,7 +1,7 @@
-defmodule Fracomex.AccountsFixtures do
+defmodule FracomexSynchro.AccountsFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `Fracomex.Accounts` context.
+  entities via the `FracomexSynchro.Accounts` context.
   """
 
   @doc """
@@ -21,7 +21,7 @@ defmodule Fracomex.AccountsFixtures do
         street: "some street",
         zipcode: "some zipcode"
       })
-      |> Fracomex.Accounts.create_user()
+      |> FracomexSynchro.Accounts.create_user()
 
     user
   end
@@ -35,7 +35,7 @@ defmodule Fracomex.AccountsFixtures do
       |> Enum.into(%{
         name: "some name"
       })
-      |> Fracomex.Accounts.create_country()
+      |> FracomexSynchro.Accounts.create_country()
 
     country
   end
@@ -50,7 +50,7 @@ defmodule Fracomex.AccountsFixtures do
         name: "some name",
         zipcode: "some zipcode"
       })
-      |> Fracomex.Accounts.create_city()
+      |> FracomexSynchro.Accounts.create_city()
 
     city
   end
