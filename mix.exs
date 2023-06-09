@@ -1,9 +1,9 @@
-defmodule FracomexSynchro.MixProject do
+defmodule Fracomex.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :fracomex_synchro,
+      app: :fracomex,
       version: "0.1.0",
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule FracomexSynchro.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {FracomexSynchro.Application, []},
+      mod: {Fracomex.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
